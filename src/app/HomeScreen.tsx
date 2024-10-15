@@ -28,14 +28,14 @@ const HomeScreen = () => {
         <View style={styles.ourServicesTextContainerStyle}>
           <Text style={styles.ourSevicesTextStyle}>Our Services</Text>
         </View>
-        
+
         <View style={styles.ourServicesContainer}>
-            <OurServices image={'https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
-            <OurServices image={'https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
-            <OurServices image={'https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
-            <OurServices image={'https://images.pexels.com/photos/208518/pexels-photo-208518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
-            <OurServices image={'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
-            <OurServices image={'https://images.pexels.com/photos/3683098/pexels-photo-3683098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/208518/pexels-photo-208518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
+          <OurServices image={'https://images.pexels.com/photos/3683098/pexels-photo-3683098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} title={'This is title'} description={'This is description'} price={'112'}></OurServices>
         </View>
       </ScrollView>
     </SafeAreaView>

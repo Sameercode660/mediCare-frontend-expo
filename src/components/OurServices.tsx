@@ -1,63 +1,82 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Link } from 'expo-router';
 
-const OurServices = ({image, title, description, price}: any) => {
+const OurServices = ({ image, title, description, price }: any) => {
     return (
-        <Link href={`./${1}`} style={styles.container}>
-            <View>
-                <Image
-                    source={{ uri: image }}
-                    style={styles.imageStyle}
-                ></Image>
+        <View style={styles.cardContainer}>
+            <Image 
+                source={{ uri: image }} 
+                style={styles.imageStyle} 
+                resizeMode="cover" 
+            />
+            <View style={styles.infoContainer}>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.description}>{description}</Text>
+                <Text style={styles.price}>Rs. {price}</Text>
+                <Link href={`/${1}`} style={styles.appointmentButton}>
+                    <Text style={styles.buttonText}>View Details</Text>
+                </Link>
             </View>
-            <View>
-                <Text style={styles.title}>Title</Text>
-                <Text style={styles.description}>This is the description</Text>
-            </View>
-            <View>
-                <Text style={styles.price}>Rs. 199</Text>
-            </View>
-        </Link>
-    )
-}
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        paddingBottom: 5,
-        paddingTop: 5,
-        borderRadius: 20,
-        gap: 4,         
+    cardContainer: {
+        backgroundColor: '#ffffff',
+        borderRadius: 15,
+        elevation: 3,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        marginVertical: 10,
+        width: '90%',
+        alignSelf: 'center',
     },
     imageStyle: {
-        width: 100,
-        height: 100,
-        borderRadius: 10
+        width: '100%',
+        height: 150,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+    },
+    infoContainer: {
+        padding: 15,
     },
     title: {
-        fontSize: 20,  // Slightly smaller than title
-        fontWeight: '600',  // Semi-bold
-        color: '#555',  // Medium gray for contrast
-        marginBottom: 8,
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 5,
     },
     description: {
-        fontSize: 16,  // Standard body text size
-        fontWeight: '400',  // Regular weight
-        color: '#333',  // Dark color for readability
-        lineHeight: 24,  // Increase line height for better readability
-        marginBottom: 6,
+        fontSize: 14,
+        color: '#666',
+        marginBottom: 10,
     },
     price: {
-        fontSize: 18,              // Larger font size
-        fontWeight: '700',         // Bold to highlight the price
-        color: '#000',             // Dark color for good contrast
-        textAlign: 'right',        // Right align for a clean layout
-        paddingVertical: 5,
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#007BFF', // Change to your preferred color
     },
-})
+    appointmentButton: {
+        marginTop: 10,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        backgroundColor: '#007BFF', // Button background color
+        borderRadius: 5,
+        alignItems: 'center',
+        textAlign: 'center'
+    },
+    buttonText: {
+        color: '#fff', // Button text color
+        fontSize: 16,
+        fontWeight: '600',
+    },
+});
 
-export default OurServices
-
+export default OurServices;
