@@ -7,10 +7,45 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [mobile, setMobile] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState<boolean>(false);
+   
 
     const handleSignUp = () => {
-        // Handle sign-up logic here
-        Alert.alert('Sign Up', `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nPassword: ${password}`);
+        try {
+            if(!name) {
+                Alert.alert("Name is empty")
+                return;
+            }
+
+            if(!email || !email.includes("@")) {
+                Alert.alert("Email is invalid")
+                return;
+            }
+
+            if(!mobile || mobile.length < 10 || mobile.length > 12) {
+                Alert.alert("Mobile number is invalid")
+                return;
+            }
+
+            if(!password) {
+                Alert.alert("Password is empty")
+                return;
+            }
+
+            const data = {
+                name,
+                email,
+                password,
+                mobile
+            }
+
+            console.log(data)
+
+        } catch (error) {
+            
+        }finally{
+
+        }
     };
 
     return (
